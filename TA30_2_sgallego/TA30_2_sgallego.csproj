@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FFA9E0C-7D93-4617-897D-FF715EE52FC6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TA30_2_sgallego</RootNamespace>
+    <AssemblyName>TA30_2_sgallego</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Asignado.cs" />
+    <Compile Include="Model\Cientificos.cs" />
+    <Compile Include="Model\Proyecto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AsignarProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AsignarProyecto.Designer.cs">
+      <DependentUpon>AsignarProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateCientifico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CreateCientifico.Designer.cs">
+      <DependentUpon>CreateCientifico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CreateProyecto.Designer.cs">
+      <DependentUpon>CreateProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DeleteCientifico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DeleteCientifico.Designer.cs">
+      <DependentUpon>DeleteCientifico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DeleteProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DeleteProyecto.Designer.cs">
+      <DependentUpon>DeleteProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReadCientifico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ReadCientifico.Designer.cs">
+      <DependentUpon>ReadCientifico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReadProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ReadProyecto.Designer.cs">
+      <DependentUpon>ReadProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateCientifico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdateCientifico.Designer.cs">
+      <DependentUpon>UpdateCientifico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdateProyecto.Designer.cs">
+      <DependentUpon>UpdateProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\VerAsignados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VerAsignados.Designer.cs">
+      <DependentUpon>VerAsignados.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\AsignarProyecto.resx">
+      <DependentUpon>AsignarProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CreateCientifico.resx">
+      <DependentUpon>CreateCientifico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CreateProyecto.resx">
+      <DependentUpon>CreateProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DeleteCientifico.resx">
+      <DependentUpon>DeleteCientifico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DeleteProyecto.resx">
+      <DependentUpon>DeleteProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ReadCientifico.resx">
+      <DependentUpon>ReadCientifico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ReadProyecto.resx">
+      <DependentUpon>ReadProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdateCientifico.resx">
+      <DependentUpon>UpdateCientifico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdateProyecto.resx">
+      <DependentUpon>UpdateProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VerAsignados.resx">
+      <DependentUpon>VerAsignados.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
